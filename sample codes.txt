@@ -1,0 +1,64 @@
+//task to be accomplished
+1. search box like google suggest //
+efficient searching...and displaying
+2. message system
+3. notification of message on desktop
+4. mobile version
+
+
+
+
+echo'<script>
+window.location.assign("welcome.php")</script>';
+
+
+echo'<script language="javascript">';
+
+echo'alert("Customer does not purchase anything.....")';
+echo'</script>';
+
+//query to retrieve username and password
+
+SELECT user.username, userpassword.password FROM USER INNER JOIN userpassword 
+ON userpassword.userId=user.userId WHERE user.username='SwapPatil'
+//query to retrieve all information about user
+
+SELECT user.userId,user.firstname,user.surname,user.email,userrole.role,user.username,userpassword.password FROM user,userrole,userpassword 
+WHERE user.username='SwapPatil' AND user.roleId=userrole.roleId AND user.userid=userpassword.userid
+
+
+
+
+//code for printing staff info
+
+                                <?php 
+include('session.php');
+// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+mysql_connect("localhost", "root", "") or die(mysql_error());
+
+// Selecting Database
+mysql_select_db("chat") or die(mysql_error());
+//$user_check=$_SESSION['login_user'];
+//$username=$user_check;
+
+$query=mysql_query("SELECT * FROM staff ");
+$rows = mysql_num_rows($query);
+if ($rows) {
+while($row=mysql_fetch_array($query))
+{
+$image=$row["Image"];
+$email=$row["Email"];
+
+echo'<ul>
+       <li><center><h4><img src="'."$image".'" width="240px" height="150px"/>
+   	   </h4></center></li>';
+
+	echo'<li><b>FirstName:</b>&nbsp;&nbsp;&nbsp;',$row["FirstName"],' </br></li>';
+	echo'<li><b>SurName:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',$row["SurName"],' </li>';
+		echo '<li><a href="#">Read More</a></li>';
+echo'</ul>';
+}
+}
+
+?>
+
