@@ -101,6 +101,9 @@
 					<p align="center">
 				       <input type="submit" name="submit" value="Register">
 		        <span><strong class="error"><br></strong></span></p>
+				<script type="text/javascript">
+				alert("Registration Successful");
+				</script>
 				   <p align="center"><span><strong class="error"><?php echo $error ?></br>
 			      </strong></span> </p>
 		  </form>

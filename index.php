@@ -100,8 +100,8 @@ $error="Invalid Login";
 		    
 				<p align="center"><span><strong class="error"><?php echo $error ?></br>
 			      </strong></span> </p>
-			<!--	<br><p align="center">New? <a href="signin.php" class="style2">click here to SignUp</a></p> s-->
-				</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot your Password? <a href="#" class="style2">Click Here</a>
+				<br><p align="center">New? <a href="signin.php" class="style2">SignIn as a Guest</a></p> 
+				<!--</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot your Password? <a href="#" class="style2">Click Here</a>-->
 		  </form>
 				    </section>
     </div>
